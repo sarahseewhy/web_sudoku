@@ -19,7 +19,9 @@
   					<% 3.times do |cell| %>
   							<div class="cell">
   								<!-- every cell will have an input field -->
-  								<input type="text" maxlength="1" autocomplete="off">
+                  <% cell_index = row * 27 + box * 3 + cell_row * 9 + cell %>
+                  <% cell_value = @current_solution[cell_index] %>
+  								<input type="text" maxlength="1" autocomplete="off" value="<%= cell_value %>">
   							</div>
   						<% end %>
   					</div>
