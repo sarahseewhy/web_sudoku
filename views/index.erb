@@ -1,0 +1,32 @@
+  <html>
+  <head>
+  	<title>Sudoku Game</title>
+  	<!-- link to the CSS stylesheet -->
+  	<link href="/stylesheets/application.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  <div id="sudoku">
+  	<!-- one div for each row -->
+  	<% 3.times do |row| %>
+  		<div class='row'>
+  				<!-- we want to create separate div elements for boxes to style them using CSS -->
+  			<% 3.times do |box| %>
+  					<div class="box">
+  				<!-- each box will have nine cells -->
+  				<% 3.times do |cell_row| %>
+  						<div class="cell-row">
+  					<% 3.times do |cell| %>
+  							<div class="cell">
+  								<!-- every cell will have an input field -->
+  								<input type="text">
+  							</div>
+  						<% end %>
+  					</div>
+  				<% end %>
+  			</div>
+  		<% end %>
+  	</div>
+  <% end %>
+ </div>
+</body>
+</html> 
