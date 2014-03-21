@@ -1,0 +1,3 @@
+<% 3.times do |cell| %>
+  <%= partial :cell, :locals=>{:cell_index => row*27+box*3+cell_row*9+cell} %>
+<% end %>
